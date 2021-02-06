@@ -6,6 +6,18 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'voice',
+    loadChildren: () => import('./voice/voice.module').then( m => m.VoicePageModule)
   }
 ];
 

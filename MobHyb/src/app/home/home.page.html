@@ -1,14 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
+<ion-toolbar color="dark"></ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar [(ngModel)]="searchTitle"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="searchMovie()">
+      <ion-icon name="search-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <img [src]="movieData.imageUrl">
+  <h1>{{ movieData.title }}</h1>
+  <p>{{ movieData.description }}</p>
   <ion-button (click)="registerNotifications(3)">3 Seconds</ion-button>
   <ion-button (click)="registerNotifications(10)">10 Seconds</ion-button>
   <ion-button (click)="logOut()">Log out</ion-button>
 
+  
+
 </ion-content>
+
