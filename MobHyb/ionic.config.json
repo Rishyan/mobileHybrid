@@ -1,0 +1,7 @@
+{
+  "name": "MobHyb",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

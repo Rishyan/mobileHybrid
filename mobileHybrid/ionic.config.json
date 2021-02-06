@@ -1,7 +1,0 @@
-{
-  "name": "mobileHybrid",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
