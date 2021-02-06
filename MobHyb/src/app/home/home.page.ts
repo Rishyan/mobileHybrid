@@ -21,7 +21,7 @@ export class HomePage {
     this.authService.logOutUser().
       then(
         () => {
-          this.router.navigateByUrl('home');
+          this.router.navigateByUrl('login');
         },
         async error => {
           const alert = await this.alertCtrl.create({

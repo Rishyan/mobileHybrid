@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { firebaseConfig } from './firebase.config';
 import firebase from 'firebase/app';
+require('firebase/auth')
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
 
-    firebase.initializeApp(firebaseConfig);
+    const app = firebase.initializeApp(firebaseConfig);
   }
 }
 
